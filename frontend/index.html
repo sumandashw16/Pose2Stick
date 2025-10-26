@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pose to Stick Figure</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Simple CSS for spinner */
+    #spinner {
+      display: none;
+      margin-top: 10px;
+      font-weight: bold;
+      color: #333;
+    }
+    .container {
+      max-width: 600px;
+      margin: 30px auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+    #preview {
+      margin-top: 20px;
+    }
+    #preview video {
+      margin-bottom: 10px;
+    }
+    #preview a {
+      display: inline-block;
+      margin: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Pose to Stick Figure Converter</h1>
+
+    <form id="uploadForm">
+      <input type="file" id="videoInput" name="video" accept="video/*" required>
+      <select id="background" name="background">
+        <option value="grid">Grid</option>
+        <option value="solid">Solid</option>
+        <option value="gradient">Gradient</option>
+      </select>
+      <div style="margin-top: 8px;">
+        <label>
+          <input type="checkbox" id="includeAudio" name="include_audio">
+          Include audio from original video
+        </label>
+      </div>
+      <button type="submit">Convert</button>
+    </form>
+
+    <div id="spinner">Processing video, please wait...</div>
+
+    <div id="statusMessage" style="margin-top: 10px; font-weight: bold; color: green;"></div>
+
+    <div id="preview">
+      <a id="downloadVideo" href="#" download>Download Video</a>
+      <a id="downloadJSON" href="#" download>Download Keypoints</a>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
