@@ -55,7 +55,10 @@ async def process_video_api(video: UploadFile, background: str = Form("grid"), i
     print(f"Finished processing: {output_video}")
 
     # Return browser-accessible URLs
+    BASE_URL = "https://pose2stick.onrender.com"  # your backend Render URL
+
     return {
-        "video_url": f"/outputs/{job_id}_stick.mp4",
-        "keypoints_url": f"/outputs/{job_id}_keypoints.json",
+        "video_url": f"{BASE_URL}/outputs/{job_id}_stick.mp4",
+        "keypoints_url": f"{BASE_URL}/outputs/{job_id}_keypoints.json",
     }
+
