@@ -1,15 +1,20 @@
-# Byte-compiled / cache files
+# 🧠 Python
 __pycache__/
-*.py[cod]
-*$py.class
+*.pyc
+*.pyo
+*.pyd
 
-# Distribution / packaging
-build/
-dist/
-*.egg-info/
-
-# Virtual environments
+# 🧱 Virtual environment
 venv/
 .env/
-.venv/
-env/
+
+# 🗂️ IDE and system files
+.vscode/
+.DS_Store
+Thumbs.db
+
+# 🎥 Output files (processed videos)
+outputs/
+
+# 🔐 Secrets (if any)
+*.env
