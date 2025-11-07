@@ -18,7 +18,7 @@ form.addEventListener("submit", async (e) => {
   formData.append("include_audio", includeAudio);
 
   try {
-    const response = await fetch("https://pose2stick.onrender.com", {
+    const response = await fetch("https://pose2stick.onrender.com/api/process", {
       method: "POST",
       body: formData,
     });
